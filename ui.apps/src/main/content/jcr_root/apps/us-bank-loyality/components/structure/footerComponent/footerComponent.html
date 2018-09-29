@@ -1,0 +1,11 @@
+<p data-sly-test=${wcmmode.edit}>Configure Footer</p>
+<div class="us-container" data-sly-use.footerModel="com.usbank.loyality.core.models.FooterModel" data-sly-test="${footerModel}">
+   <div class="links">
+      <ul class="clearfix" data-sly-test.footerList="${footerModel.footerList}" data-sly-list="${footerList}" >
+         <li><a href="${item.linkUrl}" target="${item.linkNewWindow}">${item.linkName}</a></li>
+      </ul>
+   </div>
+   <div class="copyright" data-sly-test.text="${properties.text}">
+         ${text @context='html'}
+   </div>
+</div>

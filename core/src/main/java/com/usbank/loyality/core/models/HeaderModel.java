@@ -35,6 +35,9 @@ public class HeaderModel {
 	private String logoAltText;
 	private String logoUrl;
 	private String logoNewWindow;
+	
+	private String accountLabel;
+	private String accountLink;
 
 	private List<LinkVO> listOfNavigations;
 
@@ -65,6 +68,10 @@ public class HeaderModel {
 					resourceResolver);
 			logoNewWindow = CommonUtil.isNewWindow(iValueMap.getInherited(
 					"logoNewWindow", GlobalConstants.FALSE));
+			accountLabel = iValueMap.getInherited("accountLabel", String.class);
+			accountLink = LinksUtil.checkInternalURLByPath(
+					iValueMap.getInherited("accountLink", String.class),
+					resourceResolver);
 		}
 	}
 
@@ -108,6 +115,14 @@ public class HeaderModel {
 		return logoNewWindow;
 	}
 
+	public String getAccountLabel() {
+		return accountLabel;
+	}
+
+	public String getAccountLink() {
+		return accountLink;
+	}
+	
 	public List<LinkVO> getListOfNavigations() {
 		return listOfNavigations;
 	}

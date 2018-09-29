@@ -53,6 +53,21 @@
                                         name="./newWindow"
                                         text="Open in New Window?"
                                         value="{Boolean}true"/>
+                                    <account
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Configure Back to Account Label"
+                                        fieldLabel="Back to account Label"
+                                        name="./accountLabel"
+                                        required="{Boolean}true"/>
+                                    <accountLink
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldDescription="Configure Back Link URL"
+                                        fieldLabel="Back Link URL"
+                                        name="./accountLink"
+                                        required="{Boolean}true"
+                                        rootPath="/content/us-bank-loyality"/>
                                 </items>
                             </column>
                         </items>
@@ -88,6 +103,7 @@
 	                                                            emptyText="Navigation Label"
 	                                                            fieldDescription="Configure Navigation Label"
 	                                                            fieldLabel="Navigation Label"
+                                        						required="{Boolean}true"
 	                                                            name="./linkName"/>
 	                                                        <navigationLink
 	                                                            jcr:primaryType="nt:unstructured"
@@ -96,6 +112,7 @@
 	                                                            fieldDescription="Enter fully qualified URL for external URLs. Eg: https://www.gmfinancial.com"
 	                                                            fieldLabel="Navigation Link"
 	                                                            name="./linkUrl"
+                                        						required="{Boolean}true"
 	                                                            rootPath="/content/us-bank-loyality"/>
 	                                                        <topNavNewWindow
 	                                                            jcr:primaryType="nt:unstructured"

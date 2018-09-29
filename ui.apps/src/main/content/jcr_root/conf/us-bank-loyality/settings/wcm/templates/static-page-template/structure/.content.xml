@@ -10,7 +10,7 @@
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
-        jcr:uuid="08a6a9ca-1853-404c-9114-96d95edc210e"
+        jcr:uuid="cde054c5-3ab2-449f-a54b-407cf63288a5"
         sling:resourceType="us-bank-loyality/components/structure/static-page">
         <root
             jcr:primaryType="nt:unstructured"
