@@ -11,13 +11,13 @@
         active="{Boolean}true"
         editorType="hybrid">
         <cq:childEditors jcr:primaryType="nt:unstructured">
-            <title
+            <description
                 jcr:primaryType="cq:ChildEditorConfig"
                 title="Description"
                 type="text"/>
         </cq:childEditors>
         <config jcr:primaryType="nt:unstructured">
-            <title jcr:primaryType="nt:unstructured">
+            <description jcr:primaryType="nt:unstructured">
                 <rtePlugins jcr:primaryType="nt:unstructured">
                     <subsuperscript
                         jcr:primaryType="nt:unstructured"
@@ -90,7 +90,7 @@
                         jcr:primaryType="nt:unstructured"
                         features="*"/>
                 </rtePlugins>
-            </title>
+            </description>
         </config>
     </cq:inplaceEditing>
 </jcr:root>
