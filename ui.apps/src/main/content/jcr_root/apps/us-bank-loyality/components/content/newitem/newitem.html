@@ -1,0 +1,20 @@
+<p data-sly-test=${wcmmode.edit} style="color:red;">Configure New Items Component</p>
+
+<sly data-sly-use.newitemModel="com.usbank.loyality.core.models.NewItemModel" data-sly-test="${newitemModel}">
+    <section class="redemption-item" data-sly-test.title="${properties.title}">
+        <div class="us-container">
+            <h2>${title}</h2>
+            <div class="r-content">
+                <span class="desc" data-sly-test.description="${properties.description}">${description @context='html'}</span>
+                <span class="arrow-icon"><img src="/etc/clientlibs/us-bank-loyality/img/button-arrow-right.png" alt="arrow"></span>
+                <a href="${newitemModel.ctaUrl}" target="${newitemModel.newWindow}" class="cta" data-sly-test.ctatext="${properties.ctatext}">${ctatext}</a>
+            </div>
+            <div class="redemption-carousel" data-sly-test.itemList="${newitemModel.itemList}" data-sly-list.item="${itemList}">
+                <div class="item">
+                    <a href="${item.linkUrl}" target="${item.linkNewWindow}"><img src="${item.path}" alt="${item.linkName}"></a>
+                    <div class="points">${item.title}</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</sly>
