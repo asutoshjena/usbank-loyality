@@ -1,0 +1,14 @@
+<p data-sly-test=${wcmmode.edit} style="color:red;">Configure Recommendation Carousel Component</p>
+<section class="recommendation-item" data-sly-test.title="${properties.title}">
+    <div class="us-container">
+        <sly>${title @context='html'}</sly>
+        <sly data-sly-use.carouselModel="com.usbank.loyality.core.models.RecommendationCarouselModel"
+             data-sly-test="${carouselModel}">
+            <div class="recommendation-carousel" data-sly-test.carouselList="${carouselModel.carouselList}"  data-sly-list.item="${carouselList}">
+                <div class="item">
+                    <a href="${item.linkUrl}" target="${item.linkNewWindow}"><img src="${item.path}" alt="${item.linkName}"></a>
+                </div>
+            </div>
+        </sly>
+    </div>
+</section>
