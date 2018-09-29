@@ -1,7 +1,6 @@
 <p data-sly-test=${wcmmode.edit}>Configure Footer</p>
 <div class="modal-backdrop" style="display: none; z-index: 100;" onclick="fnclosepopup()"></div>
-<div class="footer-holder" data-sly-use.footerModel="com.usbank.cms.core.models.FooterModel"
-   data-sly-test="${footerModel}">
+<div class="footer-holder" data-sly-use.footerModel="com.usbank.loyality.core.models.FooterModel" data-sly-test="${footerModel}">
    <ul class="footer-nav" data-sly-list="${footerModel.footerList}">
       <li>
          <sly data-sly-test.path="${item.path}">
