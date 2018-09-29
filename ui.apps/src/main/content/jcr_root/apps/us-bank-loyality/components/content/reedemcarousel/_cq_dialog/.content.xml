@@ -90,7 +90,7 @@
                                                             fieldLabel="Image Path"
                                                             name="./imagePath"
                                                             required="{Boolean}true"
-                                                            rootPath="/content/dam"/>
+                                                            rootPath="/content/dam/us-bank-loayality"/>
                                                         <imagealttext
                                                             jcr:primaryType="nt:unstructured"
                                                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
@@ -132,7 +132,7 @@
                                                             fieldLabel="Default Thumbnail Image Path"
                                                             name="./defaultThumbnail"
                                                             required="{Boolean}true"
-                                                            rootPath="/content/dam"/>
+                                                            rootPath="/content/dam/us-bank-loayality"/>
                                                         <activepath
                                                             jcr:primaryType="nt:unstructured"
                                                             sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
@@ -140,7 +140,7 @@
                                                             fieldLabel="Active Thumbnail Image Path"
                                                             name="./activeThumbnail"
                                                             required="{Boolean}true"
-                                                            rootPath="/content/dam"/>
+                                                            rootPath="/content/dam/us-bank-loayality"/>
                                                     </items>
                                                 </column>
                                             </items>

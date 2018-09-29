@@ -49,7 +49,7 @@
                                                             fieldDescription="Configure Image Path"
                                                             fieldLabel="Image Path"
                                                             name="./path"
-                                                            rootPath="/content/dam"/>
+                                                            rootPath="/content/dam/us-bank-loayality"/>
                                                         <imagealttext
                                                             jcr:primaryType="nt:unstructured"
                                                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
