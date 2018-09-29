@@ -15,13 +15,16 @@
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/-->
 <div data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}"></div>
 
-<div id="wrapper">
-    <div class="w1">
+<div>
+	<header>
+        <sly data-sly-resource="${@path='header', resourceType='us-bank-loyality/components/structure/header'}"/>
+    </header>
+    <main>
         <sly data-sly-use.templatedContainer="com.day.cq.wcm.foundation.TemplatedContainer"
              data-sly-repeat.child="${templatedContainer.structureResources}"
              data-sly-resource="${child.path @ resourceType=child.resourceType, decorationTagName='div'}"></sly>
-    </div>
-    <div id="footer">
+    </main>
+    <footer>
         <sly data-sly-resource="${@path='footer', resourceType='us-bank-loyality/components/structure/footer'}"/>
-    </div>
+    </footer>
 </div>
