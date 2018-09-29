@@ -61,7 +61,7 @@
                                     <itemtiles
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="us-bank-loyality/components/content/multifield"
-                                        fieldDescription="Click 'Add field' to add a new Recommendation Tile"
+                                        fieldDescription="Click 'Add field' to add a new Item Tile"
                                         fieldLabel="New Item Tiles">
                                         <field
                                             jcr:primaryType="nt:unstructured"

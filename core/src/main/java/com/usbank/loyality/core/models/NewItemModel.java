@@ -20,7 +20,7 @@ import java.util.List;
 @Model(adaptables = Resource.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class NewItemModel {
 
-    private static final Logger log = LoggerFactory.getLogger(RecommendationCarouselModel.class);
+    private static final Logger log = LoggerFactory.getLogger(NewItemModel.class);
 
     @SlingObject
     private ResourceResolver resourceResolver;

@@ -1,0 +1,40 @@
+<p data-sly-test=${wcmmode.edit} style="color:red;">Configure Reedem Carousel Component</p>
+
+<sly data-sly-use.reedemCarouselModel="com.usbank.loyality.core.models.ReedemCarouselModel" data-sly-test="${reedemCarouselModel}">
+    <section class="redeem-carousal" data-sly-test="${properties.reedemTilesList}">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!--/* MAIN SLIDES */-->
+                    <div class="redeem-slider" data-sly-test.itemList="${reedemCarouselModel.reedemCarouselList}" data-sly-list.item="${itemList}">
+                        <figure>
+                            <div class="slider-content">
+                                <div class="slider-img">
+                                    <img src="${item.imagePath}" alt="${item.imageAltText}">
+                                </div>
+                                <h1>${item.title}</h1>
+                                <div class="cont-wrapper">
+                                    <p>${item.subTitle @context='html'}</p>
+                                    <a href="${item.ctaUrl}" target="${item.newWindow}" class="slider-cta">${item.ctaText}</a>
+                                </div>
+                            </div>
+                        </figure>
+                    </div>
+                    <!--/* THUMBNAILS */-->
+                    <sly data-sly-test="${properties.thumbnailItemList}">
+                        <div class="slick-btnPlay"><img src="/etc/clientlibs/us-bank-loyality/img/icon-play.png" alt="play-icon"></div>
+                        <div class="redeem-slider-nav-thumbnails" data-sly-test.itemList="${reedemCarouselModel.thumbnailList}" data-sly-list.item="${itemList}">
+                            <div>
+                                <img src="${item.activeThumbnail}" class="thumb-active" alt="active-thumb">
+                                <img src="${item.defaultThumbnail}" class="thumb-default" alt="default-thumb">
+                                <span>${item.thumbnailTitle}</span>
+                            </div>
+                        </div>
+                        <div class="usb-bg-line"><img src="/etc/clientlibs/us-bank-loyality/img/image-usb-line.svg" alt="usb-line"></div>
+                    </sly>
+                </div>
+            </div>
+        </div>
+    </section>
+</sly>
+
