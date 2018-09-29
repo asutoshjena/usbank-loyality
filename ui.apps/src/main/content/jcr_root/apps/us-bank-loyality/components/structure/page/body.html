@@ -17,7 +17,7 @@
 
 <div>
 	<header>
-        <sly data-sly-resource="${@path='header', resourceType='us-bank-loyality/components/structure/header'}"/>
+        <div data-sly-resource="${@path='header', resourceType='us-bank-loyality/components/structure/headerComponent'}"/>
     </header>
     <main>
         <sly data-sly-use.templatedContainer="com.day.cq.wcm.foundation.TemplatedContainer"
@@ -25,6 +25,6 @@
              data-sly-resource="${child.path @ resourceType=child.resourceType, decorationTagName='div'}"></sly>
     </main>
     <footer>
-        <sly data-sly-resource="${@path='footer', resourceType='us-bank-loyality/components/structure/footer'}"/>
+        <div data-sly-resource="${@path='footer', resourceType='us-bank-loyality/components/structure/footerComponent'}"/>
     </footer>
 </div>
