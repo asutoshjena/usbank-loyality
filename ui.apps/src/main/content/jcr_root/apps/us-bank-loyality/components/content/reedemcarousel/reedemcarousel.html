@@ -22,7 +22,10 @@
                     </div>
                     <!--/* THUMBNAILS */-->
                     <sly data-sly-test="${properties.thumbnailItemList}">
-                        <div class="slick-btnPlay"><img src="/etc/clientlibs/us-bank-loyality/img/icon-play.png" alt="play-icon"></div>
+                        <div class="slick-btnPlay">
+                            <img src="/etc/clientlibs/us-bank-loyality/img/icon-play.png" alt="play-icon" class="play-btn">
+                            <img src="/etc/clientlibs/us-bank-loyality/img/icon-pause.png" alt="pause-icon" class="pause-btn">
+                        </div>
                         <div class="redeem-slider-nav-thumbnails" data-sly-test.itemList="${reedemCarouselModel.thumbnailList}" data-sly-list.item="${itemList}">
                             <div>
                                 <img src="${item.activeThumbnail}" class="thumb-active" alt="active-thumb">
