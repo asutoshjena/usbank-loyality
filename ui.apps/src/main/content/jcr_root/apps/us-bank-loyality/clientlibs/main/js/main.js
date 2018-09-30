@@ -30,33 +30,33 @@ $(function() {
         $("header").find(".placeholder-header").remove()
     }
     ), $(".redemption-carousel").slick( {
-        dots:!1, infinite:!1, speed:300, centerMode:!1, slidesToShow:4, slidesToScroll:1, prevArrow:'<button type="button" class="slick-prev"><img src="/etc/clientlibs/us-bank-loyality/img/button-arrow-left.png"></button>', nextArrow:'<button type="button" class="slick-next"><img src="/etc/clientlibs/us-bank-loyality/img/button-arrow-right.png"></button>', responsive:[ {
+        dots:!1, infinite:!1, speed:300, centerMode:!1, slidesToShow:4, slidesToScroll:1, prevArrow:'<button type="button" class="slick-prev"><img src="/content/dam/us-bank-loayality/button-arrow-left.png"></button>', nextArrow:'<button type="button" class="slick-next"><img src="/content/dam/us-bank-loayality/button-arrow-right.png"></button>', responsive:[ {
             breakpoint:1024, settings: {
                 slidesToShow: 3, slidesToScroll: 3, infinite: !0, dots: !1, arrows: !1
             }
         }
         , {
             breakpoint:480, settings: {
-                slidesToShow: 2, slidesToScroll: 2, dots: !0, arrows: !0, prevArrow: '<button type="button" class="slick-prev"><img src="/etc/clientlibs/us-bank-loyality/img/icon-chevron-left-white.png"></button>', nextArrow: '<button type="button" class="slick-next"><img src="/etc/clientlibs/us-bank-loyality/img/icon-chevron-right-white.png"></button>'
+                slidesToShow: 2, slidesToScroll: 2, dots: !0, arrows: !0, prevArrow: '<button type="button" class="slick-prev"><img src="/content/dam/us-bank-loayality/icon-chevron-left-white.png"></button>', nextArrow: '<button type="button" class="slick-next"><img src="/content/dam/us-bank-loayality/icon-chevron-right-white.png"></button>'
             }
         }
         ]
     }
     ), $(".recommendation-carousel").slick( {
-        dots:!1, infinite:!1, speed:300, centerMode:!1, slidesToShow:4, slidesToScroll:1, prevArrow:'<button type="button" class="slick-prev"><img src="/etc/clientlibs/us-bank-loyality/img/button-arrow-left.png"></button>', nextArrow:'<button type="button" class="slick-next"><img src="/etc/clientlibs/us-bank-loyality/img/button-arrow-right.png"></button>', responsive:[ {
+        dots:!1, infinite:!1, speed:300, centerMode:!1, slidesToShow:4, slidesToScroll:1, prevArrow:'<button type="button" class="slick-prev"><img src="/content/dam/us-bank-loayality/button-arrow-left.png"></button>', nextArrow:'<button type="button" class="slick-next"><img src="/content/dam/us-bank-loayality/button-arrow-right.png"></button>', responsive:[ {
             breakpoint:1024, settings: {
                 slidesToShow: 3, slidesToScroll: 3, infinite: !0, dots: !1, arrows: !1
             }
         }
         , {
             breakpoint:480, settings: {
-                slidesToShow: 2, slidesToScroll: 2, dots: !0, arrows: !0, prevArrow: '<button type="button" class="slick-prev"><img src="/etc/clientlibs/us-bank-loyality/img/icon-chevron-left-white.png"></button>', nextArrow: '<button type="button" class="slick-next"><img src="/etc/clientlibs/us-bank-loyality/img/icon-chevron-right-white.png"></button>'
+                slidesToShow: 2, slidesToScroll: 2, dots: !0, arrows: !0, prevArrow: '<button type="button" class="slick-prev"><img src="/content/dam/us-bank-loayality/icon-chevron-left-white.png"></button>', nextArrow: '<button type="button" class="slick-next"><img src="/content/dam/us-bank-loayality/icon-chevron-right-white.png"></button>'
             }
         }
         ]
     }
     ), $(".usb-banner-slider").slick( {
-        dots:!1, infinite:!1, speed:300, slidesToShow:5, slidesToScroll:1, arrows:!1, prevArrow:'<button type="button" class="slick-prev"><img src="/etc/clientlibs/us-bank-loyality/img/icon-chevron-left.png"></button>', nextArrow:'<button type="button" class="slick-next"><img src="/etc/clientlibs/us-bank-loyality/img/icon-chevron-right.png"></button>', responsive:[ {
+        dots:!1, infinite:!1, speed:300, slidesToShow:5, slidesToScroll:1, arrows:!1, prevArrow:'<button type="button" class="slick-prev"><img src="/content/dam/us-bank-loayality/icon-chevron-left.png"></button>', nextArrow:'<button type="button" class="slick-next"><img src="/content/dam/us-bank-loayality/icon-chevron-right.png"></button>', responsive:[ {
             breakpoint:1200, settings: {
                 slidesToShow: 3, slidesToScroll: 1, arrows: !0, dots: !0
             }
@@ -74,7 +74,7 @@ $(function() {
         ]
     }
     ), $(".redeem-slider").slick( {
-        slidesToShow:1, slidesToScroll:1, speed:500, arrows:!1, fade:!1, asNavFor:".redeem-slider-nav-thumbnails", autoplay:!0, autoplaySpeed:3e3, prevArrow:'<button type="button" class="slick-prev"><img src="/etc/clientlibs/us-bank-loyality/img/icon-chevron-left-white.png"></button>', nextArrow:'<button type="button" class="slick-next"><img src="/etc/clientlibs/us-bank-loyality/img/icon-chevron-right-white.png"></button>', responsive:[ {
+        slidesToShow:1, slidesToScroll:1, speed:500, arrows:!1, fade:!1, asNavFor:".redeem-slider-nav-thumbnails", autoplay:!0, autoplaySpeed:3e3, prevArrow:'<button type="button" class="slick-prev"><img src="/content/dam/us-bank-loayality/icon-chevron-left-white.png"></button>', nextArrow:'<button type="button" class="slick-next"><img src="/content/dam/us-bank-loayality/icon-chevron-right-white.png"></button>', responsive:[ {
             breakpoint:1023, settings: {
                 dots: !0, arrows: !0, asNavFor: null
             }
@@ -105,7 +105,7 @@ $(function() {
         $(".redeem-slider").slick("slickPlay"), $(this).removeClass("slick-pause-btn")
     }
     ), $(".product-detail-carousal").slick( {
-        slidesToShow:1, slidesToScroll:1, speed:500, arrows:!1, fade:!1, asNavFor:".product-detail-carousal-nav-thumbnails", autoplay:!1, autoplaySpeed:3e3, adaptiveHeight:!0, prevArrow:'<button type="button" class="slick-prev"><img src="/etc/clientlibs/us-bank-loyality/img/icon-chevron-left.png"></button>', nextArrow:'<button type="button" class="slick-next"><img src="/etc/clientlibs/us-bank-loyality/img/icon-chevron-right.png"></button>', responsive:[ {
+        slidesToShow:1, slidesToScroll:1, speed:500, arrows:!1, fade:!1, asNavFor:".product-detail-carousal-nav-thumbnails", autoplay:!1, autoplaySpeed:3e3, adaptiveHeight:!0, prevArrow:'<button type="button" class="slick-prev"><img src="/content/dam/us-bank-loayality/icon-chevron-left.png"></button>', nextArrow:'<button type="button" class="slick-next"><img src="/content/dam/us-bank-loayality/icon-chevron-right.png"></button>', responsive:[ {
             breakpoint:767, settings: {
                 dots: !0, arrows: !0, asNavFor: null, adaptiveHeight: !0, infinite: !1
             }

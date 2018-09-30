@@ -246,13 +246,13 @@ td, th {
 
 @font-face {
 	font-family: Glyphicons Halflings;
-	src: url("../resources/fonts/glyphicons-halflings-regular.eot");
-	src: url("../resources/fonts/glyphicons-halflings-regular.eot?#iefix")
+	src: url(absolute:main/resources/fonts/glyphicons-halflings-regular.eot);
+	src: url(absolute:main/resources/fonts/glyphicons-halflings-regular.eot?#iefix)
 		format("embedded-opentype"),
-		url("../resources/fonts/glyphicons-halflings-regular.woff2") format("woff2"),
-		url("../resources/fonts/glyphicons-halflings-regular.woff") format("woff"),
-		url("../resources/fonts/glyphicons-halflings-regular.ttf") format("truetype"),
-		url("../resources/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular")
+		url(absolute:main/resources/fonts/glyphicons-halflings-regular.woff2) format("woff2"),
+		url(absolute:main/resources/fonts/glyphicons-halflings-regular.woff) format("woff"),
+		url(absolute:main/resources/fonts/glyphicons-halflings-regular.ttf) format("truetype"),
+		url(absolute:main/resources/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular)
 		format("svg")
 }
 
@@ -7217,10 +7217,10 @@ button.close {
 
 @font-face {
 	font-family: slick;
-	src: url("../resources/fonts/slick.eot");
-	src: url("../resources/fonts/slick.eot?#iefix") format("embedded-opentype"),
-		url("../resources/fonts/slick.woff") format("woff"), url("../resources/fonts/slick.ttf")
-		format("truetype"), url("../resources/fonts/slick.svg#slick") format("svg");
+	src: url("../main/resources/fonts/slick.eot");
+	src: url("../main/resources/fonts/slick.eot?#iefix") format("embedded-opentype"),
+		url("../main/resources/fonts/slick.woff") format("woff"), url("../main/resources/fonts/slick.ttf")
+		format("truetype"), url("../main/resources/fonts/slick.svg#slick") format("svg");
 	font-weight: 400;
 	font-style: normal
 }
@@ -7622,7 +7622,7 @@ a.back:before {
 	}
 	.nav-menu ul li {
 		float: left;
-		padding: 0 25px
+		padding: 0 22px
 	}
 	.nav-menu ul li a {
 		padding: 0
@@ -9752,24 +9752,24 @@ footer {
 
 @font-face {
 	font-family: Helvetica Neue;
-	src: url("../resources/fonts/HelveticaNeue.eot");
-	src: url("../resources/fonts/HelveticaNeue.woff2") format("woff2"),
-		url("../resources/fonts/HelveticaNeue.woff") format("woff"),
-		url("../resources/fonts/HelveticaNeue.ttf") format("truetype"),
-		url("../resources/fonts/HelveticaNeue.svg#HelveticaNeue") format("svg"),
-		url("../resources/fonts/HelveticaNeue.eot?#iefix") format("embedded-opentype");
+	src: url(absolute:main/resources/fonts/HelveticaNeue.eot);
+	src: url(absolute:main/resources/fonts/HelveticaNeue.woff2) format("woff2"),
+		url(absolute:main/resources/fonts/HelveticaNeue.woff) format("woff"),
+		url(absolute:main/resources/fonts/HelveticaNeue.ttf) format("truetype"),
+		url(absolute:main/resources/fonts/HelveticaNeue.svg#HelveticaNeue) format("svg"),
+		url(absolute:main/resources/fonts/HelveticaNeue.eot?#iefix) format("embedded-opentype");
 	font-weight: 400;
 	font-style: normal
 }
 
 @font-face {
 	font-family: Museo;
-	src: url("../resources/fonts/Museo500-Regular.eot");
-	src: url("../resources/fonts/Museo500-Regular.woff2") format("woff2"),
-		url("../resources/fonts/Museo500-Regular.woff") format("woff"),
-		url("../resources/fonts/Museo500-Regular.ttf") format("truetype"),
-		url("../resources/fonts/Museo500-Regular.svg#Museo500-Regular") format("svg"),
-		url("../resources/fonts/Museo500-Regular.eot?#iefix") format("embedded-opentype");
+	src: url(absolute:main/resources/fonts/Museo500-Regular.eot);
+	src: url(absolute:main/resources/fonts/Museo500-Regular.woff2) format("woff2"),
+		url(absolute:main/resources/fonts/Museo500-Regular.woff) format("woff"),
+		url(absolute:main/resources/fonts/Museo500-Regular.ttf) format("truetype"),
+		url(absolute:main/resources/fonts/Museo500-Regular.svg#Museo500-Regular) format("svg"),
+		url(absolute:main/resources/fonts/Museo500-Regular.eot?#iefix) format("embedded-opentype");
 	font-weight: 400;
 	font-style: normal
 }
@@ -9829,6 +9829,10 @@ body {
 	position: relative;
 	display: block;
 	vertical-align: middle
+}
+
+.usb-select, select {
+	cursor: pointer
 }
 
 .usb-select select {
