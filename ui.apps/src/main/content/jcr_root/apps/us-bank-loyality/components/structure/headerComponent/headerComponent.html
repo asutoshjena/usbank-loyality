@@ -1,24 +1,38 @@
 <p data-sly-test=${wcmmode.edit}>Configure Header</p>
 <sly data-sly-use.headerModel="com.usbank.loyality.core.models.HeaderModel"/>
 <div class="header-sup hidden-xs">
-   <div class="us-container"><a href="${headerModel.accountLink}">${headerModel.accountLabel}</a></div>
+    <div class="us-container"><a href="${headerModel.accountLink}">${headerModel.accountLabel}</a></div>
 </div>
 <div class="header">
-   <div class="us-container clearfix">
-      <div class="logo" data-sly-test="${headerModel.logoImage}">
-         <div class="menu-trigger"><button class="hamburger" data-toggle="collapse" data-target="#mobile-toggler"><span></span> <span></span> <span></span></button></div>
-         <a href="${headerModel.logoUrl}" target="${headerModel.logoNewWindow}"><img src="${headerModel.logoImage}" srcset="/content/dam/us-bank-loayality/logo@2x.png 2x, images/logo@3x.png 3x" alt="${headerModel.logoAltText}"></a>
-      </div>
-      <div class="points-summary">
-         <span class="desc visible-lg">Hi, Jon! Points on your Perks Card: 100,000</span>
-         <div class="hidden-lg"><span class="user">Hi, Jon!</span> <span class="points">100,000 pts</span></div>
-      </div>
-      <div class="collapse navbar-collapse" id="mobile-toggler">
-         <div class="nav-menu">
-            <ul class="clearfix" data-sly-test.navList="${headerModel.listOfNavigations}" data-sly-list="${navList}">
-               <li><a href="${item.linkUrl}" target="${item.linkNewWindow}">${item.linkName}</a></li>
-            </ul>
-         </div>
-      </div>
-   </div>
+    <div class="us-container clearfix">
+        <div class="logo" data-sly-test="${headerModel.logoImage}">
+            <div class="menu-trigger">
+                <button class="hamburger" data-toggle="collapse" data-target="#mobile-toggler">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <a href="${headerModel.logoUrl}" target="${headerModel.logoNewWindow}">
+                <img src="${headerModel.logoImage}" srcset="/content/dam/us-bank-loayality/logo@2x.png 2x, images/logo@3x.png 3x" alt="${headerModel.logoAltText}"/>
+            </a>
+        </div>
+        <div class="points-summary">
+            <span class="desc visible-lg">Hi, Jon! Points on your Perks Card: 100,000</span>
+            <div class="hidden-lg">
+                <span class="user">Hi, Jon!</span>
+                <span class="points">100,000 pts</span>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="mobile-toggler">
+            <div class="nav-menu">
+                <ul class="clearfix">
+                    <li><a href="${headerModel.accountLink}" class="back visible-xs">${headerModel.accountLabel}</a></li>
+                    <sly data-sly-test.navList="${headerModel.listOfNavigations}" data-sly-list="${navList}">
+                        <li><a href="${item.linkUrl}" target="${item.linkNewWindow}">${item.linkName}</a></li>
+                    </sly>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
