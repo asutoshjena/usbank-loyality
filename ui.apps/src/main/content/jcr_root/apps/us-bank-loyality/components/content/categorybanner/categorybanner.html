@@ -1,0 +1,22 @@
+<!--/*
+  Container Component.
+*/-->
+<h3 data-sly-test.mode="${!properties.heading && (wcmmode.edit || wcmmode.design)}">Configure Category Hero Banner Component.</h3>
+<sly data-sly-use.bannerModel="com.usbank.loyality.core.models.BannerComponent"/>
+
+	<div class="hero-wrapper">
+		<div class="us-container">
+			<div class="search-wrapper">
+				<span><img src="/content/dam/us-bank-loayality/icon-search.png" alt="search"></span><input
+					type="text" name="search" placeholder="${properties.searchplaceholder || 'Product Search'}">
+			</div>
+		</div>
+		<picture>
+		<source media="(min-width: 768px)"
+			srcset="${properties.desktopimage || '/content/dam/us-bank-loayality/joshua-rawson-harris-desktop.png'}">
+		<img src="${properties.desktopimage || '/content/dam/us-bank-loayality/joshua-rawson-harris-mobile.png'}" alt="${properties.alttext || 'joshua'}"
+			class="hero-image"></picture>
+		<div class="us-container">
+			<h2>${properties.heading || 'Browse Categories'}</h2>
+		</div>
+	</div>
