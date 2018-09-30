@@ -9229,24 +9229,24 @@ footer {
 
 @font-face {
 	font-family: Helvetica Neue;
-	src: url(absolute:fonts/HelveticaNeue.eot);
-	src: url(absolute:fonts/HelveticaNeue.woff2) format("woff2"),
-		url(absolute:fonts/HelveticaNeue.woff) format("woff"),
-		url(absolute:fonts/HelveticaNeue.ttf) format("truetype"),
-		url(absolute:fonts/HelveticaNeue.svg#HelveticaNeue) format("svg"),
-		url(absolute:fonts/HelveticaNeue.eot?#iefix) format("embedded-opentype");
+	src: url("../resources/fonts/HelveticaNeue.eot");
+	src: url("../resources/fonts/HelveticaNeue.woff2") format("woff2"),
+		url("../resources/fonts/HelveticaNeue.woff") format("woff"),
+		url("../resources/fonts/HelveticaNeue.ttf") format("truetype"),
+		url("../resources/fonts/HelveticaNeue.svg#HelveticaNeue") format("svg"),
+		url("../resources/fonts/HelveticaNeue.eot?#iefix") format("embedded-opentype");
 	font-weight: 400;
 	font-style: normal
 }
 
 @font-face {
 	font-family: Museo;
-	src: url(absolute:fonts/Museo500-Regular.eot);
-	src: url(absolute:fonts/Museo500-Regular.woff2) format("woff2"),
-		url(absolute:fonts/Museo500-Regular.woff) format("woff"),
-		url(absolute:fonts/Museo500-Regular.ttf) format("truetype"),
-		url(absolute:fonts/Museo500-Regular.svg#Museo500-Regular) format("svg"),
-		url(absolute:fonts/Museo500-Regular.eot?#iefix) format("embedded-opentype");
+	src: url("../resources/fonts/Museo500-Regular.eot");
+	src: url("../resources/fonts/Museo500-Regular.woff2") format("woff2"),
+		url("../resources/fonts/Museo500-Regular.woff") format("woff"),
+		url("../resources/fonts/Museo500-Regular.ttf") format("truetype"),
+		url("../resources/fonts/Museo500-Regular.svg#Museo500-Regular") format("svg"),
+		url("../resources/fonts/Museo500-Regular.eot?#iefix") format("embedded-opentype");
 	font-weight: 400;
 	font-style: normal
 }
