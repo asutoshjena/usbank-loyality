@@ -7217,10 +7217,10 @@ button.close {
 
 @font-face {
 	font-family: slick;
-	src: url("../main/resources/fonts/slick.eot");
-	src: url("../main/resources/fonts/slick.eot?#iefix") format("embedded-opentype"),
-		url("../main/resources/fonts/slick.woff") format("woff"), url("../main/resources/fonts/slick.ttf")
-		format("truetype"), url("../main/resources/fonts/slick.svg#slick") format("svg");
+	src: url(fonts/slick.eot);
+	src: url(fonts/slick.eot?#iefix) format("embedded-opentype"),
+		url(fonts/slick.woff) format("woff"), url(fonts/slick.ttf)
+		format("truetype"), url(fonts/slick.svg#slick) format("svg");
 	font-weight: 400;
 	font-style: normal
 }
@@ -8464,7 +8464,7 @@ footer {
 	padding: 0
 }
 
-.us-breadcrumb ul li:not (:first-child ):before {
+.us-breadcrumb ul li:before {
 	content: "";
 	position: absolute;
 	width: 5px;
