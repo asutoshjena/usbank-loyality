@@ -1302,7 +1302,7 @@ td, th {
 
 html {
 	font-size: 10px;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+	-webkit-tap-highlight-color: transparent
 }
 
 body {
@@ -8079,7 +8079,8 @@ a.back:before {
 }
 
 .redeem-carousal .slider-content {
-	position: relative
+	position: relative;
+	padding-left: 5px
 }
 
 .redeem-carousal .slider-content h1 {
@@ -8092,7 +8093,7 @@ a.back:before {
 
 .redeem-carousal .slider-content .cont-wrapper {
 	display: block;
-	margin-bottom: 80px
+	margin-bottom: 100px
 }
 
 .redeem-carousal .slider-content .cont-wrapper p {
@@ -8215,12 +8216,6 @@ a.back:before {
 	outline: none
 }
 
-@media screen and (min-width:1024px) {
-	.redeem-carousal .slider-content.mobile .slider-img {
-		right: 8%
-	}
-}
-
 @media screen and (max-width:1023px) {
 	.redeem-carousal .slider-content .slider-img {
 		position: relative
@@ -8293,39 +8288,29 @@ a.back:before {
 }
 
 @media screen and (max-width:767px) {
+	.redeem-carousal .slider-content .cont-wrapper {
+		margin-bottom: 30px
+	}
 	.redeem-carousal .slider-content .slider-img img {
 		margin: 0 auto;
 		width: 100%
-	}
-	.redeem-carousal .slider-content.mobile .slider-img {
-		overflow: hidden
-	}
-	.redeem-carousal .slider-content.mobile .slider-img img {
-		max-width: 140px;
-		margin: 0 auto
 	}
 	.redeem-carousal .slider-content h1 {
 		font-size: 40px;
 		line-height: 1.1
 	}
-	.redeem-carousal .slider-content .cont-wrapper p {
+	.redeem-carousal .cont-wrapper p {
 		margin-top: 10px
 	}
-	.redeem-carousal .slider-content .cont-wrapper a.slider-cta {
+	.redeem-carousal .cont-wrapper a.slider-cta {
 		width: 100%;
 		margin-top: 10px
 	}
 }
 
 @media screen and (min-width:768px) {
-	.redeem-carousal .slider-content.flex .slider-img {
+	.redeem-carousal .slider-content .slider-img {
 		top: 38%
-	}
-	.redeem-carousal .slider-content.mobile .slider-img img {
-		max-width: 140px
-	}
-	.redeem-carousal .slider-content.gift .slider-img {
-		top: 46%
 	}
 	.cont-wrapper p {
 		padding-right: 30%
@@ -9340,7 +9325,8 @@ footer {
 }
 
 .rewards-profile .table-container {
-	overflow: auto
+	overflow: auto;
+	margin-bottom: 40px
 }
 
 .rewards-profile .table-container .table-pad {
@@ -9504,6 +9490,122 @@ footer {
 		{
 		margin-bottom: 20px
 	}
+}
+
+.margin-gutter {
+	margin-bottom: 30px !important
+}
+
+.nav-us {
+	margin: 0;
+	padding: 0;
+	list-style: none
+}
+
+.nav-us:after, .nav-us:before {
+	content: " ";
+	display: table
+}
+
+.nav-us:after {
+	clear: both
+}
+
+.nav-us li {
+	float: left;
+	width: 50%
+}
+
+.nav-us li a {
+	display: block;
+	padding: 20px 30px;
+	text-align: center;
+	text-decoration: none;
+	background: #f8f7f4;
+	font-size: 18px;
+	border: 1px solid #0e1e69
+}
+
+.nav-us li.active a {
+	background: #0e1e69;
+	color: #fff;
+	font-weight: 700
+}
+
+.tab-order {
+	background: #f8f7f4;
+	margin: 30px 0 40px;
+	padding: 28px
+}
+
+.tab-order p {
+	font-size: 18px;
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: -.3px;
+	text-align: left;
+	color: #3e3e3e
+}
+
+.tab-order .order-item {
+	border-bottom: 1px solid #afafaf
+}
+
+.tab-order .order-item .order-header {
+	background: #ddd;
+	padding: 8px 15px;
+	font-size: 13px;
+	cursor: pointer
+}
+
+.tab-order .order-item .order-summary {
+	padding: 15px;
+	font-size: 13px;
+	background: #fff
+}
+
+@media ( max-width :767px) {
+	.tab-order {
+		padding: 15px
+	}
+	.nav-us li {
+		float: left;
+		width: 50%
+	}
+	.nav-us li a {
+		padding: 20px 10px;
+		font-size: 18px
+	}
+}
+
+.usb-table .t-footer {
+	background: #f8f7f4
+}
+
+.margin-btm-20 {
+	margin-bottom: 20px
+}
+
+.icon-toggle {
+	padding-right: 4px
+}
+
+.display-ib {
+	display: inline-block
+}
+
+.right {
+	display: none
+}
+
+.bottom, .collapsed .right {
+	display: block
+}
+
+.collpased .bottom {
+	display: none
 }
 
 .check-out {

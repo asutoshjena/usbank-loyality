@@ -126,7 +126,6 @@
 		asNavFor: ".redeem-slider-nav-thumbnails",
 		autoplay: !0,
 		autoplaySpeed: 3e3,
-		adaptiveHeight: !0,
 		prevArrow: '<button type="button" class="slick-prev"><img src="/etc/clientlibs/us-bank-loyality/img/icon-chevron-left-white.png"></button>',
 		nextArrow: '<button type="button" class="slick-next"><img src="/etc/clientlibs/us-bank-loyality/img/icon-chevron-right-white.png"></button>',
 		responsive: [{
@@ -135,7 +134,8 @@
 				dots: !0,
 				arrows: !0,
 				asNavFor: null,
-				autoplay: !1
+				autoplay: !1,
+				adaptiveHeight: !0
 			}
 		}, {
 			breakpoint: 767,
@@ -143,7 +143,8 @@
 				dots: !0,
 				arrows: !0,
 				asNavFor: null,
-				autoplay: !1
+				autoplay: !1,
+				adaptiveHeight: !0
 			}
 		}]
 	}), $(".redeem-slider-nav-thumbnails").slick({
@@ -209,5 +210,7 @@
 		$(".product-list").each(function () {
 			s = $(this).data("redeem-point"), s <= t ? $(this).closest(".product-wrapper").removeClass("show hide").addClass("show") : $(this).closest(".product-wrapper").removeClass("show hide").addClass("hide")
 		})
+	}), $(document).on("click", ".order-data .order-header", function () {
+		$(this).hasClass("collapsed") ? $(this).find(".icon-toggle").attr("class", "glyphicon glyphicon-triangle-right icon-toggle") : $(this).find(".icon-toggle").attr("class", "glyphicon glyphicon-triangle-bottom icon-toggle")
 	})
 });
