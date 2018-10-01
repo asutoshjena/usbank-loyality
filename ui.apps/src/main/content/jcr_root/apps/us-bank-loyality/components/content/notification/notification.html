@@ -1,0 +1,8 @@
+<p data-sly-test.mode="${!properties.text && (wcmmode.edit || wcmmode.design)}">Configure Notification Component</p>
+<div class="alert alert-info alert-dismissible usb-alert" role="alert">
+	<button type="button" class="close" data-dismiss="alert"
+		aria-label="Close">
+		<span aria-hidden="true">&times;</span>
+	</button>
+	${properties.text @context='html'}
+</div>

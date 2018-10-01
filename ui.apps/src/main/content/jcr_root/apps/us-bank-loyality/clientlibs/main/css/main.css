@@ -1,9 +1,5 @@
 @charset "UTF-8";
-/*!
- * Bootstrap v3.3.7 (http://getbootstrap.com)
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
+/*! * Bootstrap v3.3.7 (http://getbootstrap.com) * Copyright 2011-2016 Twitter, Inc. * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
 	font-family: sans-serif;
@@ -183,7 +179,6 @@ table {
 td, th {
 	padding: 0
 }
-
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
 	*, :after, :before {
@@ -1307,7 +1302,7 @@ td, th {
 
 html {
 	font-size: 10px;
-	-webkit-tap-highlight-color: transparent
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 }
 
 body {
@@ -2944,6 +2939,7 @@ input[type=search] {
 	position: absolute;
 	margin-left: -20px;
 	margin-top: 4px\9
+
 }
 
 .checkbox+.checkbox, .radio+.radio {
@@ -5032,7 +5028,7 @@ tbody.collapse.in {
 }
 
 .breadcrumb>li+li:before {
-	content: "/ ";
+	content: "/ ";
 	padding: 0 5px;
 	color: #ccc
 }
@@ -7653,6 +7649,14 @@ a.back:before {
 	}
 }
 
+.usb-alert {
+	font-family: Museo;
+	background: #eef7fb;
+	color: #0074b3;
+	border-radius: 0;
+	margin-bottom: 0
+}
+
 @media ( min-width :1200px) {
 	.points-summary {
 		padding: 25px 0
@@ -8087,7 +8091,7 @@ a.back:before {
 }
 
 .redeem-carousal .slider-content .cont-wrapper {
-	display: inline-block;
+	display: block;
 	margin-bottom: 80px
 }
 
@@ -8095,7 +8099,7 @@ a.back:before {
 	font-family: Museo, Arial, Lucida Grande, sans-serif;
 	font-size: 25px;
 	font-weight: 500;
-	line-height: 1.48;
+	line-height: 25px;
 	color: #0e1e69;
 	letter-spacing: -.4px
 }
@@ -8176,6 +8180,10 @@ a.back:before {
 	outline: none
 }
 
+.redeem-carousal .redeem-slider-nav-thumbnails .slick-slide img {
+	max-width: 100px
+}
+
 .redeem-carousal .redeem-slider-nav-thumbnails .slick-slide img.thumb-active
 	{
 	display: none
@@ -8205,6 +8213,12 @@ a.back:before {
 
 .slick-slide:focus {
 	outline: none
+}
+
+@media screen and (min-width:1024px) {
+	.redeem-carousal .slider-content.mobile .slider-img {
+		right: 8%
+	}
 }
 
 @media screen and (max-width:1023px) {
@@ -8280,7 +8294,15 @@ a.back:before {
 
 @media screen and (max-width:767px) {
 	.redeem-carousal .slider-content .slider-img img {
+		margin: 0 auto;
 		width: 100%
+	}
+	.redeem-carousal .slider-content.mobile .slider-img {
+		overflow: hidden
+	}
+	.redeem-carousal .slider-content.mobile .slider-img img {
+		max-width: 140px;
+		margin: 0 auto
 	}
 	.redeem-carousal .slider-content h1 {
 		font-size: 40px;
@@ -8292,6 +8314,21 @@ a.back:before {
 	.redeem-carousal .slider-content .cont-wrapper a.slider-cta {
 		width: 100%;
 		margin-top: 10px
+	}
+}
+
+@media screen and (min-width:768px) {
+	.redeem-carousal .slider-content.flex .slider-img {
+		top: 38%
+	}
+	.redeem-carousal .slider-content.mobile .slider-img img {
+		max-width: 140px
+	}
+	.redeem-carousal .slider-content.gift .slider-img {
+		top: 46%
+	}
+	.cont-wrapper p {
+		padding-right: 30%
 	}
 }
 
@@ -9752,12 +9789,12 @@ footer {
 
 @font-face {
 	font-family: Helvetica Neue;
-	src: url(absolute:main/resources/fonts/HelveticaNeue.eot);
-	src: url(absolute:main/resources/fonts/HelveticaNeue.woff2) format("woff2"),
-		url(absolute:main/resources/fonts/HelveticaNeue.woff) format("woff"),
-		url(absolute:main/resources/fonts/HelveticaNeue.ttf) format("truetype"),
-		url(absolute:main/resources/fonts/HelveticaNeue.svg#HelveticaNeue) format("svg"),
-		url(absolute:main/resources/fonts/HelveticaNeue.eot?#iefix) format("embedded-opentype");
+	src: url(../fonts/HelveticaNeue.eot);
+	src: url(../fonts/HelveticaNeue.woff2) format("woff2"),
+		url(../fonts/HelveticaNeue.woff) format("woff"),
+		url(../fonts/HelveticaNeue.ttf) format("truetype"),
+		url(../fonts/HelveticaNeue.svg#HelveticaNeue) format("svg"),
+		url(../fonts/HelveticaNeue.eot?#iefix) format("embedded-opentype");
 	font-weight: 400;
 	font-style: normal
 }
