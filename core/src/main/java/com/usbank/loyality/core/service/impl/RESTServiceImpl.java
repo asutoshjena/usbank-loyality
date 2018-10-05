@@ -29,28 +29,37 @@ import com.usbank.loyality.core.service.EhcacheManager;
 import com.usbank.loyality.core.service.RESTService;
 import com.usbank.loyality.core.utils.CommonUtil;
 
-@Component(
-		immediate =  true,
-	    service = RESTService.class,
-	    property = {
-	    	"process.label=Booking Engine REST Service Consumer",
-	    	 Constants.SERVICE_DESCRIPTION + "=Booking Engine REST Service Consumer"
-	    }
-)
+/**
+ * The Class RESTServiceImpl.
+ */
+@Component(immediate = true, service = RESTService.class, property = {
+		"process.label=US Bank REST Service Consumer",
+		Constants.SERVICE_DESCRIPTION + "=US Bank REST Service Consumer" })
 public class RESTServiceImpl implements RESTService {
 
+	/** The Constant log. */
 	private static final Logger log = LoggerFactory
 			.getLogger(RESTServiceImpl.class);
-	
+
+	/** The api config. */
 	@Reference
 	ApiConfigServiceImpl apiConfig;
-	
+
+	/** The ehcache manager. */
 	@Reference
 	EhcacheManager ehcacheManager;
 
+	/** The eh cache config. */
 	@Reference
 	EhcacheConfigServiceImpl ehCacheConfig;
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * com.usbank.loyality.core.service.RESTService#makeGetWSCall(java.lang.
+	 * String, java.util.Map, java.util.Map)
+	 */
 	@Override
 	public String makeGetWSCall(String endPointUrl,
 			Map<String, String> requestParams, Map<String, String> headers) {
@@ -61,15 +70,17 @@ public class RESTServiceImpl implements RESTService {
 				int size = requestParams.size();
 				int index = 0;
 				for (String param : requestParams.keySet()) {
-					if(index++ == size - 1)
-						params = params + param + "=" + requestParams.get(param);
+					if (index++ == size - 1)
+						params = params + param + "="
+								+ requestParams.get(param);
 					else
-						params = params + param + "=" + requestParams.get(param) + "&";
+						params = params + param + "="
+								+ requestParams.get(param) + "&";
 				}
 				endPointUrl = endPointUrl.contains("?") ? endPointUrl + "&"
 						+ params : endPointUrl + "?" + params;
 			}
-			log.debug("endPointUrl::::::"+endPointUrl);
+			log.debug("endPointUrl::::::" + endPointUrl);
 			HttpGet get = new HttpGet(endPointUrl);
 
 			if (null != headers && !headers.isEmpty()) {
@@ -80,7 +91,7 @@ public class RESTServiceImpl implements RESTService {
 
 			CloseableHttpResponse response = client.execute(get);
 			int statusCode = response.getStatusLine().getStatusCode();
-			log.debug("Status code is ::" + statusCode);
+			log.debug("Status code is ::", statusCode);
 			HttpEntity entity = response.getEntity();
 			return EntityUtils.toString(entity, GlobalConstants.UTF_8);
 		} catch (Exception e) {
@@ -89,18 +100,32 @@ public class RESTServiceImpl implements RESTService {
 		return "";
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * com.usbank.loyality.core.service.RESTService#makeGetWSCall(java.lang.
+	 * String, java.util.Map)
+	 */
 	@Override
 	public String makeGetWSCall(String endPointUrl,
-			Map<String, String> requestParams){
+			Map<String, String> requestParams) {
 		Map<String, String> headers = new HashMap<String, String>();
-		headers.put("Content-Type",GlobalConstants.CONTENT_TYPE);
+		headers.put("Content-Type", GlobalConstants.CONTENT_TYPE);
 		headers.put("Accept-Language", GlobalConstants.ACCEPT_LANGUAGE);
 		return makeGetWSCall(endPointUrl, requestParams, headers);
 	}
-	
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * com.usbank.loyality.core.service.RESTService#makePostWSCall(java.lang
+	 * .String, java.lang.String, java.util.Map, java.util.Map)
+	 */
 	@Override
 	public String makePostWSCall(String endPointUrl, String requestBody,
-			Map<String, String> requestParams,  Map<String, String> headers){
+			Map<String, String> requestParams, Map<String, String> headers) {
 		try {
 			CloseableHttpClient client = HttpClients.createDefault();
 			HttpPost post = new HttpPost(endPointUrl);
@@ -121,7 +146,8 @@ public class RESTServiceImpl implements RESTService {
 
 			CloseableHttpResponse response = client.execute(post);
 			int statusCode = response.getStatusLine().getStatusCode();
-			log.info("Post request status code is ::{} ==> {}" , statusCode,response.getStatusLine().getReasonPhrase());
+			log.info("Post request status code is ::{} ==> {}", statusCode,
+					response.getStatusLine().getReasonPhrase());
 			HttpEntity entity = response.getEntity();
 			return EntityUtils.toString(entity, GlobalConstants.UTF_8);
 		} catch (Exception e) {
@@ -130,6 +156,13 @@ public class RESTServiceImpl implements RESTService {
 		return "";
 	}
 
+	/**
+	 * Gets the parameters body.
+	 *
+	 * @param requestParams
+	 *            the request params
+	 * @return the parameters body
+	 */
 	private List<BasicNameValuePair> getParametersBody(
 			Map<String, String> requestParams) {
 		List<BasicNameValuePair> parametersBody = requestParams
@@ -142,18 +175,32 @@ public class RESTServiceImpl implements RESTService {
 		return parametersBody;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * com.usbank.loyality.core.service.RESTService#makePostWSCall(java.lang
+	 * .String, java.lang.String, java.util.Map)
+	 */
 	@Override
 	public String makePostWSCall(String endPointUrl, String requestBody,
-			Map<String, String> requestParams){
+			Map<String, String> requestParams) {
 		Map<String, String> headers = new HashMap<String, String>();
-		headers.put("Content-Type",GlobalConstants.CONTENT_TYPE);
+		headers.put("Content-Type", GlobalConstants.CONTENT_TYPE);
 		headers.put("Accept-Language", GlobalConstants.ACCEPT_LANGUAGE);
 		return makePostWSCall(endPointUrl, requestBody, requestParams, headers);
 	}
-	
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * com.usbank.loyality.core.service.RESTService#makePatchWSCall(java.lang
+	 * .String, java.lang.String, java.util.Map, java.util.Map)
+	 */
 	@Override
 	public String makePatchWSCall(String endPointUrl, String requestBody,
-			Map<String, String> requestParams,  Map<String, String> headers){
+			Map<String, String> requestParams, Map<String, String> headers) {
 		try {
 			CloseableHttpClient client = HttpClients.createDefault();
 			HttpPatch patch = new HttpPatch(endPointUrl);
@@ -174,7 +221,7 @@ public class RESTServiceImpl implements RESTService {
 
 			CloseableHttpResponse response = client.execute(patch);
 			int statusCode = response.getStatusLine().getStatusCode();
-			log.info("Patch request status code is ::" + statusCode);
+			log.info("Patch request status code is ::", statusCode);
 			HttpEntity entity = response.getEntity();
 			return EntityUtils.toString(entity, GlobalConstants.UTF_8);
 		} catch (Exception e) {
@@ -183,21 +230,33 @@ public class RESTServiceImpl implements RESTService {
 		return "";
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * com.usbank.loyality.core.service.RESTService#makePatchWSCall(java.lang
+	 * .String, java.lang.String, java.util.Map)
+	 */
 	@Override
 	public String makePatchWSCall(String endPointUrl, String requestBody,
-			Map<String, String> requestParams){
+			Map<String, String> requestParams) {
 		Map<String, String> headers = new HashMap<String, String>();
-		headers.put("Content-Type",GlobalConstants.CONTENT_TYPE);
+		headers.put("Content-Type", GlobalConstants.CONTENT_TYPE);
 		headers.put("Accept-Language", GlobalConstants.ACCEPT_LANGUAGE);
 		return makePatchWSCall(endPointUrl, requestBody, requestParams, headers);
 	}
-	
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.usbank.loyality.core.service.RESTService#getOauthToken()
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public String getOauthToken(){
+	public String getOauthToken() {
 		log.info("Entered getOauthtoken");
 		Map<String, String> headers = new HashMap<String, String>();
-		headers.put("Content-Type",GlobalConstants.CONTENT_TYPE);
+		headers.put("Content-Type", GlobalConstants.CONTENT_TYPE);
 		headers.put("Accept-Language", GlobalConstants.ACCEPT_LANGUAGE);
 		headers.put("Authorization", GlobalConstants.AUTHORIZATION);
 
@@ -207,14 +266,17 @@ public class RESTServiceImpl implements RESTService {
 		params.put("password", apiConfig.getPassword());
 		params.put("response_type", apiConfig.getResponseType());
 
-		String responseString = makePostWSCall(
-				apiConfig.getApiEndPointUrl() + GlobalConstants.TOKEN_URL,
-				null, params, headers);
-		Map<String,String> tokenJson = (Map<String,String>)CommonUtil.getObjectFromJson(responseString,  new HashMap<String, String>());
-		String token = tokenJson.containsKey("AccessToken")?tokenJson.get("AccessToken"):"";
-		if(StringUtils.isNotEmpty(token)){
-			ehcacheManager.addElementToCache(ehCacheConfig.getCacheName(), GlobalConstants.TOKEN_CACHE_NAME, token);
+		String responseString = makePostWSCall(apiConfig.getApiEndPointUrl()
+				+ GlobalConstants.TOKEN_URL, null, params, headers);
+		Map<String, String> tokenJson = (Map<String, String>) CommonUtil
+				.getObjectFromJson(responseString,
+						new HashMap<String, String>());
+		String token = tokenJson.containsKey("AccessToken") ? tokenJson
+				.get("AccessToken") : "";
+		if (StringUtils.isNotEmpty(token)) {
+			ehcacheManager.addElementToCache(ehCacheConfig.getCacheName(),
+					GlobalConstants.TOKEN_CACHE_NAME, token);
 		}
-		return token;	
+		return token;
 	}
 }
