@@ -1,10 +1,13 @@
 <!--/*
-  Container Component.
+  Banner Component.
 */-->
-<h3 data-sly-test.mode="${!properties.heading && (wcmmode.edit || wcmmode.design)}">Configure Container Component.</h3>
+<sly data-sly-test.heading="${properties.heading}"/>
+<sly data-sly-test.hideBanner="${properties.hideBanner}"/>
+
+<h3 data-sly-test.mode="${(hideBanner || !heading) && (wcmmode.edit || wcmmode.design)}">Configure Banner Component.</h3>
 <sly data-sly-use.bannerModel="com.usbank.loyality.core.models.BannerComponent"/>
 
-<section class="us-banner" data-sly-test.heading="${properties.heading}">
+<section class="us-banner" data-sly-test="${!hideBanner && heading}">
     <div class="us-container">
         <h1 class="us-head-text">${heading}</h1>
     </div>

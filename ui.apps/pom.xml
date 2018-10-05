@@ -72,6 +72,10 @@
             <type>content-package</type>
             <classifier>min</classifier>
         </dependency>
+        <dependency>
+		    <groupId>net.sf.ehcache</groupId>
+		    <artifactId>ehcache</artifactId>
+		</dependency>
     </dependencies>
     <build>
         <resources>
@@ -111,6 +115,11 @@
                             <artifactId>usbank_loyality.core</artifactId>
                             <target>/apps/us-bank-loyality/install</target>
                         </embedded>
+                        <embedded>
+                            <groupId>net.sf.ehcache</groupId>
+		    				<artifactId>ehcache</artifactId>
+                            <target>/apps/us-bank-loyality/install</target>
+                        </embedded> 
                     </embeddeds>
 
                     <subPackages>
