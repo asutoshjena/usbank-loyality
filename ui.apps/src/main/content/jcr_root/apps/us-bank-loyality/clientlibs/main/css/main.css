@@ -1302,7 +1302,7 @@ td, th {
 
 html {
 	font-size: 10px;
-	-webkit-tap-highlight-color: transparent
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 }
 
 body {
@@ -7211,15 +7211,7 @@ button.close {
 	background: #fff url(ajax-loader.gif) 50% no-repeat
 }
 
-@font-face {
-	font-family: slick;
-	src: url(fonts/slick.eot);
-	src: url(fonts/slick.eot?#iefix) format("embedded-opentype"),
-		url(fonts/slick.woff) format("woff"), url(fonts/slick.ttf)
-		format("truetype"), url(fonts/slick.svg#slick) format("svg");
-	font-weight: 400;
-	font-style: normal
-}
+
 
 .slick-next, .slick-prev {
 	position: absolute;
@@ -8783,7 +8775,17 @@ footer {
 	text-decoration: none
 }
 
-.categories-component .sub-categories-wrap ul li a span.glyphicon {
+.categories-component .sub-categories-wrap ul li a[aria-expanded=false] span.glyphicon-plus:before
+	{
+	content: "\002b"
+}
+
+.categories-component .sub-categories-wrap ul li a[aria-expanded=true] span.glyphicon-plus:before
+	{
+	content: "\2212"
+}
+
+.categories-component .sub-categories-wrap ul li span.glyphicon-plus {
 	font-size: 14px;
 	-webkit-text-stroke: 1px #fff;
 	-moz-text-stroke: 1px #fff;
@@ -8793,7 +8795,7 @@ footer {
 }
 
 @media ( max-width :767px) {
-	.categories-component .sub-categories-wrap ul li a span.glyphicon {
+	.categories-component .sub-categories-wrap ul li span.glyphicon-plus {
 		float: right;
 		padding-right: 10px
 	}
@@ -8903,22 +8905,10 @@ footer {
 	}
 }
 
-.breadcrumb-component {
-	padding: 20px 0 15px;
-	background-color: #f8f7f4
-}
-
-.breadcrumb-component p {
-	color: #4d4d4d;
-	font-size: 12px;
-	font-weight: 700;
-	letter-spacing: .4px
-}
-
-@media screen and (max-width:767px) {
-	.breadcrumb-component {
-		display: none
-	}
+.us-breadcrumb.detail-page {
+	background: #f8f7f4;
+	padding: 30px 0 25px;
+	margin: 0
 }
 
 .product-carousal-component {
@@ -9001,6 +8991,11 @@ footer {
 .product-carousal-component .product-detail-carousal-nav-thumbnails .slick-list
 	{
 	margin: 0 -5px
+}
+
+.product-carousal-component .product-detail-carousal-nav-thumbnails .slick-list .slick-track
+	{
+	transform: translateZ(0) !important
 }
 
 .product-carousal-component .product-detail-carousal-nav-thumbnails .slick-list .slick-slide
@@ -9891,12 +9886,12 @@ footer {
 
 @font-face {
 	font-family: Helvetica Neue;
-	src: url(../fonts/HelveticaNeue.eot);
-	src: url(../fonts/HelveticaNeue.woff2) format("woff2"),
-		url(../fonts/HelveticaNeue.woff) format("woff"),
-		url(../fonts/HelveticaNeue.ttf) format("truetype"),
-		url(../fonts/HelveticaNeue.svg#HelveticaNeue) format("svg"),
-		url(../fonts/HelveticaNeue.eot?#iefix) format("embedded-opentype");
+	src: url(absolute:main/resources/fonts/HelveticaNeue.eot);
+	src: url(absolute:main/resources/fonts/HelveticaNeue.woff2) format("woff2"),
+		url(absolute:main/resources/fonts/HelveticaNeue.woff) format("woff"),
+		url(absolute:main/resources/fonts/HelveticaNeue.ttf) format("truetype"),
+		url(absolute:main/resources/fonts/HelveticaNeue.svg#HelveticaNeue) format("svg"),
+		url(absolute:main/resources/fonts/HelveticaNeue.eot?#iefix) format("embedded-opentype");
 	font-weight: 400;
 	font-style: normal
 }
